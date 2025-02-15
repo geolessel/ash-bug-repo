@@ -1,6 +1,7 @@
 import Config
 
 config :playdate, ecto_repos: [Playdate.Repo]
+config :playdate, ash_domains: [Playdate.People]
 
 config :ash,
   allow_forbidden_field_for_relationships_by_default?: true,
