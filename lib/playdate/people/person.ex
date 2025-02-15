@@ -12,7 +12,9 @@ defmodule Playdate.People.Person do
   actions do
     defaults [:read, create: :*]
 
-    read :list
+    read :list do
+      prepare build(load: [:date_of_latest_activity])
+    end
   end
 
   attributes do
@@ -24,5 +26,16 @@ defmodule Playdate.People.Person do
     end
 
     timestamps()
+  end
+
+  relationships do
+    has_many :activities, Playdate.People.Activity
+  end
+
+  aggregates do
+    first :date_of_latest_activity, :activities, :date do
+      sort date: :desc
+      public? true
+    end
   end
 end

@@ -13,7 +13,11 @@ defmodule Playdate.People.Activity do
   end
 
   actions do
-    defaults [:read, create: :*]
+    defaults [:read]
+
+    create :create do
+      accept [:date, :person_id]
+    end
   end
 
   attributes do
