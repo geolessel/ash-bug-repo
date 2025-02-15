@@ -7,6 +7,10 @@ defmodule Playdate.People do
       define :create_person, action: :create
       define :list_people, action: :list
     end
+
+    resource Playdate.People.Activity do
+      define :create_activity, action: :create
+    end
   end
 
   authorization do
