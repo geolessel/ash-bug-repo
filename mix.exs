@@ -27,7 +27,8 @@ defmodule Playdate.MixProject do
     [
       {:ash_postgres, "~> 2.0"},
       {:sourceror, "~> 1.7", only: [:dev, :test]},
-      {:ash, "~> 3.0"},
+      {:ash,
+       github: "ash-project/ash", sha: "74697631f1f1c32c489ed8a66d9844e209311b7e", override: true},
       {:igniter, "~> 0.5", only: [:dev, :test]}
       # {:dep_from_hexpm, "~> 0.3.0"},
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
