@@ -5,6 +5,7 @@ defmodule Playdate.People do
   resources do
     resource Playdate.People.Person do
       define :create_person, action: :create
+      define :update_person, action: :update
       define :list_people, action: :list
     end
 
