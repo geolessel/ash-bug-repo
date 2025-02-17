@@ -2,6 +2,8 @@
 
 ## Map update with authorization bug
 
+Tag: `map-bug` (https://github.com/geolessel/ash-bug-repo/releases/tag/map-bug)
+
 Original report/discussion: https://elixirforum.com/t/updating-map-column-fails-authorization-in-very-specific-scenarios/69433
 
 To replicate, setup the application and in IEx run
@@ -49,6 +51,8 @@ Playdate.People.update_person(zach, %{birthdate: %{year: 2000, month: 1, day: 1}
 ```
 
 ## Actor aggregate sorting bug
+
+Tag: `actor-bug` (https://github.com/geolessel/ash-bug-repo/releases/tag/actor-bug)
 
 This exists to exercise an Ash bug when sorting by an aggregate when also requiring an actor.
 
